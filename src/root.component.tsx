@@ -1,3 +1,10 @@
+import { client, Provider } from "@cancy-project/api";
+import MyTicketList from "./mytickets.component";
+
 export default function Root(props) {
-  return <section>{props.name} is mounted!</section>;
+  return (
+    <Provider value={client}>
+      <MyTicketList />
+    </Provider>
+  );
 }
