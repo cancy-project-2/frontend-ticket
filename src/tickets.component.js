@@ -21,7 +21,7 @@ export default function TicketList() {
   const { data, fetching, error } = result;
 
   if (fetching) {
-    return (<p>{'...'}</p>)
+    return <p>{"..."}</p>;
   }
 
   return (
