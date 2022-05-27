@@ -15,14 +15,16 @@ const ticketsQuery = `
   }
 `;
 
-export default function MyTicketList() {
+export default function TicketList() {
   const [result, reexecuteQuery] = useQuery({ query: ticketsQuery });
 
   const { data, fetching, error } = result;
 
   return (
-    {data.tickets.map(ticket => (
-      <p key={ticket.id}>{ticket.id}</p>
-    ))}
+    <div>
+      {data.tickets.map((ticket) => (
+        <p key={ticket.id}>{ticket.id}</p>
+      ))}
+    </div>
   );
 }

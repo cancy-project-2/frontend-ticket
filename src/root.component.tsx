@@ -1,10 +1,10 @@
 import { client, Provider } from "@cancy-project/api";
-import MyTicketList from "./mytickets.component";
+import TicketList from "./tickets.component";
 
 export default function Root(props) {
   return (
     <Provider value={client}>
-      <MyTicketList />
+      <TicketList />
     </Provider>
   );
 }
