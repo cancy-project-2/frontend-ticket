@@ -1,4 +1,6 @@
 import { useQuery } from "@cancy-project/api";
+import { Masonry, Box } from "@cancy-project/styleguide";
+import TicketCard from "./card.component";
 
 const ticketsQuery = `
   query {
@@ -25,10 +27,12 @@ export default function TicketList() {
   }
 
   return (
-    <div>
+    <Masonry>
       {data.tickets.map((ticket) => (
-        <p key={ticket.id}>{ticket.id}</p>
+        <Box key={ticket.id}>
+          <TicketCard ticket={ticket} />
+        </Box>
       ))}
-    </div>
+    </Masonry>
   );
 }
